@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <ListView
-        android:id="@+id/city_list"
+    <!-- Input for adding new cities -->
+    <EditText
+        android:id="@+id/new_city_input"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:hint="Enter city name" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Button for adding city -->
+    <Button
+        android:id="@+id/add_city_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD CITY" />
+
+    <!-- ListView to display the cities -->
+    <ListView
+        android:id="@+id/city_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Button for deleting selected city -->
+    <Button
+        android:id="@+id/delete_city_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE CITY" />
+</LinearLayout>
